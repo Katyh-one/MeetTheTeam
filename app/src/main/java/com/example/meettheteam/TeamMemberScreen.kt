@@ -86,7 +86,7 @@ fun TeamMemberItem(
                     onClick = { expanded = !expanded }
                 )
             }
-//            dog hobby info only shows if the expanded is set to true
+//            member info only shows if the expanded is set to true
             if(expanded) {
                 MemberAbout(
                         teamMember.emailRes, teamMember.linkedInImage, teamMember.nameRes, modifier = Modifier.padding(
@@ -103,7 +103,10 @@ fun TeamMemberItem(
 }
 
 
-//Expand more icon display
+/**
+ * Composable that sets the arrows depending on onclick activity
+ * expanded boolean drives which arrow shows
+ */
 @Composable
 private fun TeamMemberItemButton(
     expanded: Boolean,
@@ -157,7 +160,8 @@ fun MemberIcon(
 /**
  * Composable that displays a members's name and job title.
  *
- * @param memberName is the resource ID for the string of the dog's name
+ * @param memberName is the resource ID for the string of the members's name
+ * @param jobtitle is the resource ID for the string of the members's job title
  * @param modifier modifiers to set to this composable
  */
 @Composable
@@ -178,7 +182,10 @@ fun MemberInformation(
         )
     }
 }
-//Composable to create the app bar that sits at the top of the page
+/**
+ * Composable to create the app bar that sits at the top of the page
+ */
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MeetTheTeamTopAppBar(modifier: Modifier = Modifier){
@@ -206,7 +213,13 @@ fun MeetTheTeamTopAppBar(modifier: Modifier = Modifier){
     )
 }
 
-//information displayed in the dropdown
+/**
+ * information displayed in the dropdown when the arrow is clicked
+ * * @param memberEmail is the resource ID for the string of the members's email address
+ *  * @param linkedin is the resource ID for the image of the members's linkedin image
+ *  @param memberName is the resource ID for the string of the member's name
+ *  * @param modifier modifiers to set to this composable
+ */
 @Composable
 fun MemberAbout(
     @StringRes memberEmail: Int,
@@ -226,6 +239,7 @@ fun MemberAbout(
             style = MaterialTheme.typography.bodyLarge
         )
         Spacer(modifier = Modifier.weight(1f))
+//        linkedin image is only displayed if not null
         linkedIn?.let {
             Image(
                 painter = painterResource(id = it),
@@ -237,7 +251,9 @@ fun MemberAbout(
 }
 
 
-
+/**
+ *  information about the project team
+ */
 @Composable
 fun AboutTheTeam(
         modifier: Modifier = Modifier

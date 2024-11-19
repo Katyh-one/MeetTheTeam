@@ -38,6 +38,9 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+/**
+* Composable that creates the app including the top bar and the creation of the list of items
+ */
 
 @Composable
 fun MeetTheTeamApp() {
