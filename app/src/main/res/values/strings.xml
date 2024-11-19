@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Meet The Team</string>
+    <string name="member1">Katy Hatch</string>
+    <string name="email1">katy.hatch@sky.uk</string>
+    <string name="member2">Jeanette Kho</string>
+    <string name="email2">jeanette.kho@sky.uk</string>
+    <string name="member3">Rana Jabbar</string>
+    <string name="email3">rana.jabbar@sky.uk</string>
+    <string name="member4">Tanya Waqanika</string>
+    <string name="email4">tanya.waqanika@sky.uk</string>
+    <string name="member5">Benjamin Tossell </string>
+    <string name="email5">benjamin.tossell@sky.uk</string>
+
+    <string name="job1">Associate Software Engineer</string>
+    <string name="job2">Scrum Master</string>
+
+    <string name="expand_button_content_description">See more or less information about a team member.</string>
+</resources>
